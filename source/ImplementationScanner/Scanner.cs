@@ -4,12 +4,10 @@ using System.Runtime.Serialization;
 using System.Text.Json;
 using Bogus;
 
-namespace EventLibraryGenerator;
+namespace ImplementationScanner;
 
-
-public static class ImplementationScanner<TBase>
+public static class Scanner<TBase>
 {
-    private static string LANGUAGE = "en";
     private static JsonSerializerOptions _jsonOptions = new()
     {
         WriteIndented = true
@@ -29,9 +27,9 @@ public static class ImplementationScanner<TBase>
         _typeFilter = filter ?? throw new ArgumentNullException(nameof(filter));
     }
 
-    public static List<TBase> GenerateEvents()
+    public static List<TBase> GetImplementations(string language = "en")
     {
-        var faker = new Faker(LANGUAGE);
+        var faker = new Faker(language);
         var assemblies = AppDomain.CurrentDomain.GetAssemblies();
 
         var eventTypes = assemblies
@@ -52,15 +50,15 @@ public static class ImplementationScanner<TBase>
         return results;
     }
 
-    public static string GenerateEventsJsonString()
+    public static string GetImplementationsJson(JsonSerializerOptions? options = null)
     {
-        var events = GenerateEvents();
+        var events = GetImplementations();
 
         var jsonItems = new List<string>();
 
         foreach (var ev in events)
         {
-            string json = JsonSerializer.Serialize(ev, ev.GetType(), _jsonOptions);
+            string json = JsonSerializer.Serialize(ev, ev.GetType(), options ?? _jsonOptions);
             jsonItems.Add(json);
         }
 
