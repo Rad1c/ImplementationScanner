@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "7UzYwzuqWtg=",
+  "dgSpecHash": "0CYkyw4/hMet93DVvdl5MM2sofv6Ln7sq4rVeY65pXdKPMlr4kp+9Xgyid2Y37kow5D1hjuk8YHQghx7Gpye2A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Administrator\\source\\repos\\EventLibraryGenerator\\EventLibraryGenerator\\EventLibraryGenerator.csproj",
+  "projectFilePath": "/home/runner/work/ImplementationScanner/ImplementationScanner/EventLibraryGenerator/EventLibraryGenerator.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Administrator\\.nuget\\packages\\bogus\\35.6.3\\bogus.35.6.3.nupkg.sha512"
+    "/home/runner/.nuget/packages/bogus/35.6.3/bogus.35.6.3.nupkg.sha512"
   ],
   "logs": []
 }
