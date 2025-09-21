@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "7UzYwzuqWtg=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Administrator\\source\\repos\\EventLibraryGenerator\\EventLibraryGenerator\\EventLibraryGenerator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\bogus\\35.6.3\\bogus.35.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
